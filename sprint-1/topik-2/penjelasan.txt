@@ -1,0 +1,74 @@
+1. Soal 1:
+
+php > var_dump($d+$e);
+--> int(5)
+
+
+
+
+var_dump($e == $f);
+--> bool(true)
+karena == itu adalah operator pembandingan sama dengan, meskipun type data
+berbeda $e = string & $f = int, tetapi karena nilai nya sama jadi dianggap
+true;
+
+
+
+
+var_dump($e === $f);
+--> bool(false)
+karena === itu adalah operator pembandingan type data, jadi type data
+$e = string & $f = int, maka hasilnya jadi dianggap false;
+
+
+
+
+var_dump($g);
+--> NULL
+null adalah NULL alias kosong (0 untuk di integer)
+
+
+
+
+var_dump((bool)$g);
+--> bool(false)
+null adalah NULL alias tidak ada nilai atau di convert ke bool = false.
+
+
+
+
+var_dump((int)$g);
+--> int(0)
+null adalah NULL alias kosong (di convert ke interger nilainya tetap 0)
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
+2. Soal 2:
+
+var_dump(true && false);
+--> bool(false)
+dalam operator logika && atau (dan) kedua nilai harus bernilai TRUE. Jika salah satu ada yang salah, maka
+nilai yang dihasilkan akan false.
+
+
+
+var_dump(true || false);
+--> bool(true)
+dalam operator logika || (atau, or) kedua nilai tidak harus bernilai TRUE. Salah satu ada yang FALSE pun
+operator logika akan tetap berjalan.
+
+
+
+var_dump(false || false);
+--> bool(false)
+dalam operator logika || (atau, or) 
+
+
+
+var_dump(!false);
+--> bool(true)
+! = Tidak (negasi atau kebalikan atau lawannya)
