@@ -1,0 +1,8 @@
+1. Buatlah file php dengan kode berikut?
+Jawab : <a href="latihan-1.php"></a>
+
+2. Jalankan program lewat CLI?
+Jawab : <img src="screenshots/CLI-command.png">
+
+3. Jalankan program lewat Browser?
+Jawab : <img src="screenshots/Browser.png">

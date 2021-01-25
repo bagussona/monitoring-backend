@@ -1,0 +1,13 @@
+2. Latihan 2
+
+which php
+
+which php adalah perintah untuk mencari dimana lokasi penyimpanan installasi php entah itu versi 7 atau 80
+atau lokasi pengeksekusian program yang berbasis php.
+screenshots : <img src="screenshots/which-php.png">
+
+lalu, kenapa bisa seperti itu saat menjalankan file .txt?
+
+karena, PHP CLI merupakan PHP yang dijalankan melalui Command Line. Dan bisa juga digunakan untuk menampilkan
+isi dari file yang mau dibuka.
+screenshots : <img src="screenshots/php2txt.png">

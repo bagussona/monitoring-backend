@@ -1,0 +1,73 @@
+1.1 Pseudo Code
+
+>> Membuat pseudo code cara mengoperasikan Microsoft Word <<
+
+
+<PROGRAM JUDUL= mengoperasikan Microsoft Word>
+
+SET laptop = 1;
+SET microsoft-office = 1;
+fungsi #install = installing-app;
+fungsi #sld = siapkan laptop dulu;
+fungsi #hidupkan = nyala;
+fungsi #mulai = membuka aplikasi;
+
+ALGORITMA=
+menyiapkan_laptop()
+JIKA laptop < 1 MAKA
+        tampilkan #sld();
+    LAINNYA 
+        tampilkan #hidupkan();
+        AKHIRIJIKA;
+
+KETIKA laptop == #hidupkan;
+        #mulai microsoft-office;
+    AKHIRIKETIKA
+
+JIKA microsoft-office < 1 MAKA
+        tampilkan #install microsoft-office();
+    LAINNYA
+        tampilkan #mulai microsoft-office
+        AKHIRIJIKA
+
+</PROGRAM>
+
+
+
+
+>> Membuat pseudo code 7STEP <<
+
+<PROGRAM JUDUL= pergi test rapid antigen corona>
+
+SET harga = 150.000;
+SET #mask => masker-3ply;
+SET #antis => handsanitizer;
+SET #fsh => faceshield;
+fungsi #pakai => GUNAKAN;
+fungsi #pergi => BERANGKAT CHECKUP;
+fungsi #kesehatan => hasil test antigen;
+fungsi #checkup => test rapid antigen corona;
+
+ALGORITMA=
+pergicheckup();
+JIKA #pakai[#mask, #antis, #fsh] < 1 MAKA
+        tampilkan "Harus sesuai protokol kesehatan dan gunakan 3M"
+    LAINNYA
+        tampilkan "#pergi"
+    AKHIRIJIKA
+
+sampailabkesda();
+JIKA harga > 150.000 MAKA
+            tampilkan "Tidak jadi"
+        LAINNYA
+            tampilkan "#checkup"
+        AKHIRIJIKA
+
+hasilcheckup()
+JIKA kesehatan < 1 MAKA
+            tampilkan "Bayar #harga && Harus Isolasi di rumah sakit selama 14 hari";
+        LAINNYA
+            tampilkan "Bayar #harga && Selamat anda Sehat dan terbebas dari corona";
+        AKHIRIJIKA
+
+</PROGRAM>

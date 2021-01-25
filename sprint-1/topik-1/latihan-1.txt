@@ -1,0 +1,20 @@
+1. Latihan 1
+
+php -v?
+
+Untuk menampilkan versi php yang terinstall lewat terminal.
+screenshots : <img src="screenshots/php-v.png">
+
+php -a?
+
+Untuk masuk ke mode php interaktif. ketika kita berada di mode interaktif php ini,
+kita bisa mengeksekusi kode php tanpa harus menggunakan syntax php lagi. Jadi kita
+hanya tinggal memerintahkan kode php nya saja.
+screenshots : <img src="screenshots/php-a.png">
+
+php -a? di beri output “hello world”
+
+ketika kita berada di mode interaktif php ini, kita bisa mengeksekusi kode php tanpa
+harus menggunakan syntax php lagi. Jadi kita hanya tinggal memerintahkan kode php nya saja.
+screenshots : <img src="screenshots/php-aecho.png">
+
