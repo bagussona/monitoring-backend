@@ -1,4 +1,7 @@
 1. Soal 1:
+screenshots : <img src="tugas1.png">
+
+
 
 php > var_dump($d+$e);
 --> int(5)
@@ -48,6 +51,10 @@ null adalah NULL alias kosong (di convert ke interger nilainya tetap 0)
 ------------------------------------------------------------------------------------------------------
 
 2. Soal 2:
+screenshots : <img src="tugas2.png">
+
+
+
 
 var_dump(true && false);
 --> bool(false)
@@ -59,13 +66,13 @@ nilai yang dihasilkan akan false.
 var_dump(true || false);
 --> bool(true)
 dalam operator logika || (atau, or) kedua nilai tidak harus bernilai TRUE. Salah satu ada yang FALSE pun
-operator logika akan tetap berjalan.
+operator logika akan tetap berjalan true.
 
 
 
 var_dump(false || false);
 --> bool(false)
-dalam operator logika || (atau, or) 
+dalam operator logika || (atau, or) jika kedua nilai false maka akan langsung false.
 
 
 
