@@ -29,16 +29,16 @@ $R = 4 * $C /5;
 $F = 9 * $C /5 + 32;
 $K = $C + 273;
 
-echo "Suhu $C celcius <br>";
-echo "<br><br><br>";
-echo "diconvert ke reamur jadi? <br>";
-echo "$R reamur<br>";
-echo "<br><br><br>";
-echo "diconvert ke fahreinheit jadi? <br>";
-echo "$F fahreinheit<br>";
-echo "<br><br><br>";
-echo "diconvert ke kelvin jadi? <br>";
-echo "$K kelvin<br>";
+echo "Suhu $C celcius  \n";
+echo " \n \n \n";
+echo "diconvert ke reamur jadi?  \n";
+echo "$R reamur \n";
+echo " \n \n \n";
+echo "diconvert ke fahreinheit jadi?  \n";
+echo "$F fahreinheit \n";
+echo " \n \n \n";
+echo "diconvert ke kelvin jadi?  \n";
+echo "$K kelvin \n";
 
 
 ?>
