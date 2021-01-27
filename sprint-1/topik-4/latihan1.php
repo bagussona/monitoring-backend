@@ -1,7 +1,6 @@
 <?php
 $nilai_santri = array(5, 9, 6, 7, 9, 8, 10, 7, 8);
 $i = [];
-if(isset($i[1])) echo $i[1];
 $jml = count($nilai_santri); //jumlah array
 
 //var_dump($nilai_santri);
@@ -12,7 +11,7 @@ $jml = count($nilai_santri); //jumlah array
 echo "Dit: Carilah mean! \n" . "Nilai rata-rata santri adalah : " . array_sum($nilai_santri) / $jml . "\n";
 echo "\n";
 
-sort($nilai_santri);
+rsort($nilai_santri);
  $median = round($jml / 2);
  $ambilindextengah = $nilai_santri[$median-1]; 
 
@@ -23,7 +22,7 @@ echo "\n";
     // echo $jml;
     // echo $ambilindextengah;
     // echo $median;
-    // print_r ($nilai_santri);
+    print_r ($nilai_santri);
 
 
 //MODUS
@@ -32,13 +31,32 @@ echo "\n";
 
  //BELUM SKIP DULU!
 
-error_reporting(0);
+// error_reporting(0);
 
-$tertinggi = max($nilai_santri);
-for ($i=0; $i <= $jml; $i++){
-    echo $nilai_santri[$i] . " ";
+
+// Nilai Tertinggi
+
+// $tertinggi = max($nilai_santri);
+
+$nilai_tertinggi = array_slice($nilai_santri, 0, 3);
+echo "Dit: Carilah nilai tertinggi! \n";
+foreach ($nilai_tertinggi as $hasil => $val){
+    echo "Nilai tertinggi adalah : " . $nilai_tertinggi[$hasil] . "\n";
 }
-echo "Dit: Carilah nilai tertinggi! \n" . "Nilai tertinggi adalah : " . $tertinggi . "\n";
+print_r ($nilai_tertinggi);
+
 echo "\n";
+
+
+// Nilai Terendah
+
+// $terendah = min($nilai_santri);
+sort($nilai_santri);
+$nilai_terendah = array_slice($nilai_santri, 0, 3);
+echo "Dit: Carilah nilai terendah! \n";
+foreach ($nilai_terendah as $hasil => $val){
+    echo "Nilai terendah adalah : " . $nilai_terendah[$hasil] . "\n";
+}
+print_r ($nilai_terendah);
 
 echo "\n";
