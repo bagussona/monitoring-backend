@@ -22,14 +22,26 @@ echo "\n";
     // echo $jml;
     // echo $ambilindextengah;
     // echo $median;
-    print_r ($nilai_santri);
+    // print_r ($nilai_santri);
 
 
 //MODUS
-echo "Dit: Carilah modus! \n" . "Modus nya adalah : " . "kodenyablmwkwk". "\n";
+
+$modus = array_count_values($nilai_santri);
+// print_r(max($modus));c
+echo "Dit: Carilah modus! \n" . "Modus nya adalah : " . "\n";
+foreach ($modus as $key => $value) {
+    if ($value == max($modus)) {
+        $max = $value;
+    }else {
+        continue;
+    }
+    echo " Nilai ".$key . " ada ". $max. "\n";
+}
+
 echo "\n";
 
- //BELUM SKIP DULU!
+
 
 // error_reporting(0);
 

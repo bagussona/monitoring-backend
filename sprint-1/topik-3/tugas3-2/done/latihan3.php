@@ -5,7 +5,10 @@ for ($i=1; $i <= $n; $i++){
         if ($i==$j || ($i+$j==10) ) {
             echo "+ ";
          }
-         elseif (($i+$j) <= 9 && $i < $j || ($i+$j) >= 11 && $i > $j ) {
+         elseif (($i+$j) <= 9 && $i < $j){
+            echo "+ ";
+         }
+         elseif (($i+$j) >= 11 && $i > $j) {
              echo "+ ";
          }
              else echo "- ";
