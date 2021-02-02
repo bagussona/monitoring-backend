@@ -50,7 +50,7 @@ echo "
 ################################################";
 echo "\n \n";
 
-echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Kembalikan buku" . "\n";
+echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Pinjam buku" . "3. Kembalikan buku" . "\n";
 echo "\n \n \n";
 echo "Silahkan pilih berdasar angka : \n";
 
@@ -63,6 +63,10 @@ echo $MyPerpusMenu->menu_Buku();
     // $MyPerpusMenu = new MyPerpus();
     // echo $MyPerpusMenu->menu_Buku();
     echo "2";
+} elseif ($pilih_Menu == 3) {
+    // $MyPerpusMenu = new MyPerpus();
+    // echo $MyPerpusMenu->menu_Buku();
+    echo "3";
 }else {
     echo "ELSE";
 }
