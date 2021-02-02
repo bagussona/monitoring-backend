@@ -29,39 +29,26 @@ class MyPerpus{
     echo "Berikut daftar buku yang kami miliki" . "\n \n";
     foreach($this->databook as $key => $value) { 
         echo "=>" . $key . "\n";
-        foreach ($value as $keys => $list_buku) {
-            echo $keys . " => " . $list_buku . "\n";
+        foreach ($value as $key => $list_buku) {
+            echo $key . " => " . $list_buku . "\n";
         }
         echo "\n";
         }
     }
 
-    public function sort_Pinjam($data_type, $cari)
+    public function sort_Peminjaman($databook, $data_type, $cari)
     {
-    echo "Selamat anda telah berhasil meminjam buku " . "\n";
-    foreach ($this->databook as $value) {
-        foreach($value as $keys => $val){
-            if ($value[$data_type] == $cari) {
-                echo "$val ";
-                }
+    $sort = [];
+    foreach($this->databook as $keys => $value) {
+        if ($value[$data_type] == $cari) {
+            $sort[] = $value;
         }
-    }
+        }
     }
 
-    public function sort_Kembali($data_type, $cari)
-    {
-    echo "Selamat anda telah berhasil mengembalikan buku " . "\n";
-    foreach ($this->databook as $value) {
-        foreach($value as $keys => $val){
-            if ($value[$data_type] == $cari) {
-                echo "$val ";
-                }
-        }
-    }
-    }
 }
 
-
+// print_r($databook);
 
 // $MyPerpusMenu->menu_Buku($databooks);
 
@@ -73,7 +60,7 @@ echo "
 ################################################";
 echo "\n \n";
 
-echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Kembalikan buku" . "\n";
+echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Pinjam buku" . "\n". "3. Kembalikan buku" . "\n";
 echo "\n \n \n";
 echo "Silahkan pilih berdasar angka : \n";
 
@@ -82,25 +69,28 @@ $pilih_Menu = trim(fgets(STDIN));
 if ($pilih_Menu == 1) {
     $MyPerpusMenu = new MyPerpus();
 echo $MyPerpusMenu->menu_Buku();
-
-echo "Mau Pinjam Buku?" . "\n";
+} elseif ($pilih_Menu == 2) {
+    echo "Mau Pinjam Buku?" . "\n";
 echo "Tulis Judul Buku yang mau dipinjam?" . "\n";
 $input2 = trim(fgets(STDIN));
-$MyPerpusMenu->sort_Pinjam('Judul', (string)$input2);
 
-} elseif ($pilih_Menu == 2) {
+$sort = sort_Peminjaman($databook, 'Judul', (string)$input2);
+echo "Selamat anda telah berhasil meminjam buku " . "\n";
+foreach($sort as $key => $value){
+    foreach ($value as $val) {
+    echo "$val ";
+    }
+    echo "\n";
+}
     $MyPerpusMenu = new MyPerpus();
-    echo $MyPerpusMenu->menu_Buku();
-
-    echo "Mau Kembalikan Buku?" . "\n";
-    echo "Tulis Judul Buku yang mau dikembalikan?" . "\n";
-    
-    $input2 = trim(fgets(STDIN));
-    $MyPerpusMenu->sort_Kembali('Judul', (string)$input2);
+    echo $MyPerpusMenu->sort_Peminjaman($databook, 'Judul', (string)$input2);
+} elseif ($pilih_Menu == 3) {
+    // $MyPerpusMenu = new MyPerpus();
+    // echo $MyPerpusMenu->menu_Buku();
+    echo "3";
 }else {
     echo "ELSE";
 }
-
 
     // echo "Mau Pinjam Buku yang mana?";
     // $greetings = trim(fgets(STDIN));
