@@ -47,7 +47,7 @@ echo "Berikut daftar buku yang kami miliki" . "\n";
         }
 
 
-function sort_BUKU($databook, $data_type, $cari)
+function sort_Peminjaman($databook, $data_type, $cari)
 {
     $sort = [];
     foreach ($databook as $key => $value) {
@@ -64,7 +64,7 @@ echo "Mau Pinjam Buku?" . "\n";
 echo "Tulis Judul Buku yang mau dipinjam?" . "\n";
 $input2 = trim(fgets(STDIN));
 
-$sort = sort_BUKU($databook, 'Judul', (string)$input2);
+$sort = sort_Peminjaman($databook, 'Judul', (string)$input2);
 echo "Selamat anda telah berhasil meminjam buku " . "\n";
 foreach($sort as $key => $value){
     // print_r($value);

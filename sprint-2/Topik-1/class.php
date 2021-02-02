@@ -74,9 +74,18 @@ if ($pilih_Menu == 1) {
     $MyPerpusMenu = new MyPerpus();
 echo $MyPerpusMenu->menu_Buku();
 
+
+
+
+
+
 // echo "Mau Pinjam Buku?" . "\n";
 // echo "Ketikkan JUDUL?" . "\n";
 // $input1 = trim(fgets(STDIN));
+
+
+
+
 echo "Tulis Judul Buku yang mau dipinjam?" . "\n";
 $input2 = trim(fgets(STDIN));
 
@@ -98,18 +107,6 @@ foreach($sort as $key => $value){
     echo "ELSE";
 }
 
-
-
-echo "Mau Pinjam buku? \n";
-
-echo "Ketik Judul buku yang mau dipinjam?";
-$input1 = (string)trim(fgets(STDIN));
-
-echo "Ketik No ISBN nya";
-$input2 = (string)trim(fgets(STDIN));
-
-$MyPerpusBuku = new MyPerpus();
-echo $MyPerpusBuku->sort_BUKU($databook, $input1, $input2);
 
 
     // echo "Mau Pinjam Buku yang mana?";

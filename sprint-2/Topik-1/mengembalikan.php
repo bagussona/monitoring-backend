@@ -21,12 +21,6 @@ $databook = [
     // print_r($databook);
 
 
-
-
-
-
-
-
     
 echo "
 ################################################
@@ -47,7 +41,7 @@ echo "Berikut daftar buku yang kami miliki" . "\n";
         }
 
 
-function sort_BUKU($databook, $data_type, $cari)
+function sort_Pengembalian($databook, $data_type, $cari)
 {
     $sort = [];
     foreach ($databook as $key => $value) {
@@ -59,16 +53,12 @@ function sort_BUKU($databook, $data_type, $cari)
 }
 
 echo "Mau Kembalikan Buku?" . "\n";
-// echo "Ketikkan JUDUL?" . "\n";
-// $input1 = trim(fgets(STDIN));
 echo "Tulis Judul Buku yang mau dikembalikan?" . "\n";
 $input2 = trim(fgets(STDIN));
 
-$sort = sort_BUKU($databook, 'Judul', (string)$input2);
+$sort = sort_Pengembalian($databook, 'Judul', (string)$input2);
 echo "Terima kasih telah mengembalikan buku " . "\n";
 foreach($sort as $key => $value){
-    // print_r($value);
-    // echo "$key => $value ";
     foreach ($value as $val) {
     echo "$val ";
     }
