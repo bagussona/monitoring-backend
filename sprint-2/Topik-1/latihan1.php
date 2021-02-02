@@ -50,7 +50,7 @@ echo "
 ################################################";
 echo "\n \n";
 
-echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Pinjam buku" . "3. Kembalikan buku" . "\n";
+echo "Pilih Menu" . "\n" . "1. Daftar buku" . "\n" . "2. Pinjam buku" . "\n". "3. Kembalikan buku" . "\n";
 echo "\n \n \n";
 echo "Silahkan pilih berdasar angka : \n";
 
@@ -70,19 +70,6 @@ echo $MyPerpusMenu->menu_Buku();
 }else {
     echo "ELSE";
 }
-
-
-
-echo "Mau Pinjam buku? \n";
-
-echo "Ketik Judul buku yang mau dipinjam?";
-$input1 = (string)trim(fgets(STDIN));
-
-echo "Ketik No ISBN nya";
-$input2 = (string)trim(fgets(STDIN));
-
-$MyPerpusBuku = new MyPerpus();
-echo $MyPerpusBuku->sort_BUKU($databook, $input1, $input2);
 
 
     // echo "Mau Pinjam Buku yang mana?";
