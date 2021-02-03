@@ -41,11 +41,11 @@ try {
 class ErrSegitiga extends Exception{}
 function CheckErrSegitiga($A, $T){
     if ($A === "" && $T === "") {
-        throw new ErrPersegi('Alas & Tinggi harus diisi dan tidak boleh 0 ' . "\n");
+        throw new ErrSegitiga('Alas & Tinggi harus diisi dan tidak boleh 0 ' . "\n");
     } elseif ($A === ""){
-        throw new ErrPersegi('Alas tidak boleh 0 '."\n");
+        throw new ErrSegitiga('Alas tidak boleh 0 '."\n");
     } elseif ($T === "") {
-        throw new ErrPersegi('Tinggi tidak boleh 0 ' . "\n");
+        throw new ErrSegitiga('Tinggi tidak boleh 0 ' . "\n");
     }
 }
 
@@ -69,7 +69,7 @@ try {
     $result = CheckErrSegitiga($Alas, $Tinggi);
     $calc = new Segitiga();
     $calc::hitungLuas($Alas, $Tinggi);
-} catch (ErrPersegi $error) {
+} catch (ErrSegitiga $error) {
         echo "Error: {$error->getMessage()}";
 }
 
