@@ -3,12 +3,12 @@
 //Segitiga
 class ErrSegitiga extends Exception{}
 function CheckErrSegitiga($A, $T){
-    if ($A === "" && $T === "") {
-        throw new ErrSegitiga('Alas & Tinggi harus diisi dan tidak boleh 0 ' . "\n");
-    } elseif ($A === ""){
-        throw new ErrSegitiga('Alas tidak boleh 0 '."\n");
-    } elseif ($T === "") {
-        throw new ErrSegitiga('Tinggi tidak boleh 0 ' . "\n");
+    if ($A <= 1 && $T <= 1) {
+        throw new ErrSegitiga('Alas & Tinggi harus diisi dan tidak boleh bernilai minus apalagi 0 ' . "\n");
+    } elseif ($A <= 1){
+        throw new ErrSegitiga('Alas tidak boleh bernilai minus dan 0 '."\n");
+    } elseif ($T <= 1) {
+        throw new ErrSegitiga('Tinggi tidak boleh bernilai minus dan 0 ' . "\n");
     }
 }
 

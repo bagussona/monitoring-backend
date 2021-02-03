@@ -3,12 +3,12 @@
 //Persegi
 class ErrPersegi extends Exception{}
 function CheckErrPersegi($P, $L){
-    if ($P === "" && $L === "") {
-        throw new ErrPersegi('Panjang & Lebar harus diisi dan tidak boleh 0 ' . "\n");
-    } elseif ($L === ""){
-        throw new ErrPersegi('Lebar tidak boleh 0 '."\n");
-    } elseif ($P === "") {
-        throw new ErrPersegi('Panjang tidak boleh 0 ' . "\n");
+    if ($P <= 1 && $L <= 1) {
+        throw new ErrPersegi('Panjang & Lebar harus diisi dan tidak boleh minus apalagi 0 ' . "\n");
+    } elseif ($L <= 1){
+        throw new ErrPersegi('Lebar tidak boleh minus dan 0 '. "\n");
+    } elseif ($P <= 1) {
+        throw new ErrPersegi('Panjang tidak boleh minus dan 0 ' . "\n");
     }
 }
 
@@ -40,12 +40,12 @@ try {
 //Segitiga
 class ErrSegitiga extends Exception{}
 function CheckErrSegitiga($A, $T){
-    if ($A === "" && $T === "") {
-        throw new ErrSegitiga('Alas & Tinggi harus diisi dan tidak boleh 0 ' . "\n");
-    } elseif ($A === ""){
-        throw new ErrSegitiga('Alas tidak boleh 0 '."\n");
-    } elseif ($T === "") {
-        throw new ErrSegitiga('Tinggi tidak boleh 0 ' . "\n");
+    if ($A <= 1 && $T <= 1) {
+        throw new ErrSegitiga('Alas & Tinggi harus diisi dan tidak boleh bernilai minus apalagi 0 ' . "\n");
+    } elseif ($A <= 1){
+        throw new ErrSegitiga('Alas tidak boleh bernilai minus dan 0 '."\n");
+    } elseif ($T <= 1) {
+        throw new ErrSegitiga('Tinggi tidak boleh bernilai minus dan 0 ' . "\n");
     }
 }
 
@@ -77,14 +77,14 @@ try {
 //Trapesium
 class ErrTrapesium extends Exception{}
 function CheckErrTrapesium($P1, $P2, $T){
-    if ($P1 === "" && $P2 === "" && $T === "") {
-        throw new ErrTrapesium('Panjang1 & Panjang2 & Tinggi harus diisi dan tidak boleh 0 ' . "\n");
-    } elseif ($P1 === ""){
-        throw new ErrTrapesium('Panjang1 tidak boleh 0 '."\n");
-    } elseif ($P2 === ""){
-        throw new ErrTrapesium('Panjang2 tidak boleh 0 ' . "\n");
-    } elseif ($T === ""){
-        throw new ErrTrapesium('Tinggi tidak boleh 0 ' . "\n");
+    if ($P1 <= 1 && $P2 <= 1 && $T <= 1) {
+        throw new ErrTrapesium('Panjang1 & Panjang2 & Tinggi harus diisi dan tidak boleh bernilai minus apalagi 0 ' . "\n");
+    } elseif ($P1 <= 1){
+        throw new ErrTrapesium('Panjang1 tidak boleh bernilai minus dan 0 '."\n");
+    } elseif ($P2 <= 1){
+        throw new ErrTrapesium('Panjang2 tidak boleh bernilai minus dan 0 ' . "\n");
+    } elseif ($T <= 1){
+        throw new ErrTrapesium('Tinggi tidak boleh bernilai minus dan 0 ' . "\n");
     }
 }
 
