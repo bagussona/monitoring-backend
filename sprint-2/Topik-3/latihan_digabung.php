@@ -79,6 +79,8 @@ class ErrTrapesium extends Exception{}
 function CheckErrTrapesium($P1, $P2, $T){
     if ($P1 <= 1 && $P2 <= 1 && $T <= 1) {
         throw new ErrTrapesium('Panjang1 & Panjang2 & Tinggi harus diisi dan tidak boleh bernilai minus apalagi 0 ' . "\n");
+    } elseif ($P1 <= 1 && $P2 <= 1){
+        throw new ErrTrapesium('Panjang1 & Panjang2 harus diisi dan tidak boleh bernilai minus apalagi 0 '."\n"); 
     } elseif ($P1 <= 1){
         throw new ErrTrapesium('Panjang1 tidak boleh bernilai minus dan 0 '."\n");
     } elseif ($P2 <= 1){
