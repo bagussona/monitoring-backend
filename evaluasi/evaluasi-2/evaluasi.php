@@ -63,19 +63,27 @@ class Register{
 
         //Tampilan_sudahterhapus
         public function SantriTerhapus($data_type, $cari){
-            $NewSantri = [];
-                foreach ($this->student as $keys => $asntri) {
-                   if ($asntri[$data_type] == $cari){
-                       unset($asntri[$cari]);
-                   }
-                    else {
-                       $NewSantri[] = $asntri;
-                   }
-                   print_r($NewSantri);
-                }
-    
-                return $NewSantri;
-                }
+          $NewSantri = [];
+              foreach ($this->student as $keys => $asntri) {
+                 if ($asntri[$data_type] == $cari){
+                     unset($asntri[$cari]);
+                 }
+                  else {
+                     $NewSantri[] = $asntri;
+                 }
+                //  print_r($NewSantri);
+              }
+              echo "Sisa Santri". "\n";
+              foreach ($NewSantri as $valuer)
+                // echo "=>" . $keyd . "\n";
+              foreach ($valuer as $k => $v) {
+                echo "$k" . " => " . "$v" . "\n";
+              }
+
+              // print_r($NewSantri);
+              return $NewSantri;
+
+              }
     
     
 
