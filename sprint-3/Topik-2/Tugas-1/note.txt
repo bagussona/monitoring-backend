@@ -1,0 +1,32 @@
+#Apa itu `1NF` (First Normal Form)?
+-> Normalisasi Database 1NF;
+Adalah Entitas yang atributnya memiliki tidak lebih dari satu nilai untuk contoh tunggal entitas tersebut.
+
+Pada intinya bentuk normalisasi 1NF ini mengelompokkan beberapa tipe data atau kelompok data yang sejenis,
+agar dapat dipisahkan sehingga dup data dapat di atasi.
+
+
+             ################################################################################
+
+
+#Apa itu `2NF` (Second Normal Form)?
+-> Normalisasi Database 1NF;
+Adalah Entitas yang atribut non-primary key-nya hanya tergantung pada full primary key.
+
+Pada intinya bentuk normalisasi 2NF ini mengelompokkan beberapa tipe data atau kelompok data yang sejenis.
+Yang sudah dikelompokkan saat 1NF tadi dan dibuat menjadi tabel terpisah.
+-> Contoh?;
+ketika ingin menghapus, mengupdate, atau menambahkan suatu data, dengan tipe yang sama. Tinggal index by id
+di tabel yang telah dipisah, lalu done yang ingin dilakukan. Dan otomatis, jika data Primary_Key dihapus tentu
+otomatis data di Foreign_Key juga terhapus.
+
+             ################################################################################
+
+
+#Apa itu `3NF` (Third Normal Form)?
+-> Normalisasi Database 3NF;
+Adalah Entitas yang atribut non-primary key-nya tidak tergantung pada atribut nonprimary key yang lain.
+
+Pada intinya bentuk normalisasi 3NF ini bertujuan untuk menghilangkan seluruh atribut atau field yang
+tidak berhubungan dengan primary key. Dengan demikian tidak ada ketergantungan transitif pada setiap
+kandidat key
