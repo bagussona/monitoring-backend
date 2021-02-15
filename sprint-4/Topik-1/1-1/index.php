@@ -16,8 +16,8 @@
             <p class="pPost" id="pPost">Harga</p>
             <input type="text" name="harga" id="harga-post" placeholder="harga..">
             <input type="submit" value="submit">
+            </form>
         </div>
-        </form>
 <!-- <break> -->
         <div class="MethodGet">
             <form action="post.php" method="get">
@@ -32,8 +32,8 @@
             <p class="pGet" id="pGet">Tujuan Barang</p>
             <input type="text" name="tujuan" id="tujuan-get" placeholder="masukkan alamat tujuan..">
             <input type="submit" value="submit">
-        </div>
         </form>
+        </div>
     </div>
 </body>
 </html>
