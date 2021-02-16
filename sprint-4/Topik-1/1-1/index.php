@@ -35,5 +35,9 @@
         </form>
         </div>
     </div>
+
+    <div class="footer">
+        <h1>INI HANYA METHOD BIASA AWKWKWK</h1>
+    </div>
 </body>
 </html>

@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    display: flex;
+    display: flexbox;
     justify-content: center;
 
     /* display: grid; */
@@ -17,24 +17,14 @@ body {
 
 .MethodPost {
     /* grid-template-columns: auto; */
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
     max-width: 400px;
-    margin-left: 1em;
+    margin-left: 25em;
+    margin-top: 6em;
     margin-bottom: 1em;
     /* margin-top: 4em; */
-    padding: 1em 2em 2em 1em;
-    background: rgb(160, 152, 152);
-}
-
-.MethodGet {
-    /* grid-template-columns: auto; */
-    /* display: flex;
-    justify-content: center; */
-    max-width: 400px;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    padding: 1em 2em 2em 1em;
+    padding: 2em 4em 2em 2em;
     background: rgb(236, 102, 102);
 }
 

@@ -15,19 +15,26 @@ body {
     padding: 4em 2em 4em 2em;
 }
 
-.MethodPost {
-    /* grid-template-columns: auto; */
-    /* display: flex;
-    justify-content: center; */
-    max-width: 400px;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    /* margin-top: 4em; */
-    padding: 1em 2em 2em 1em;
-    background: rgb(160, 152, 152);
+table{
+    border: 3px solid black; 
+    width: 100%;
+}
+th{
+    border: 1px solid black;
+    background: rgb(236, 102, 102);
+    padding: 1em 1em 1em 1em;
+}
+tr, td{
+    border: 1px solid black; 
+    background: rgb(43, 219, 43);
+    /* text-align: center; */
 }
 
-.MethodGet {
+#add{
+    text-align: right;
+}
+
+.MethodPost {
     /* grid-template-columns: auto; */
     /* display: flex;
     justify-content: center; */
@@ -37,11 +44,3 @@ body {
     padding: 1em 2em 2em 1em;
     background: rgb(236, 102, 102);
 }
-
-input{
-    max-width: 150px;
-}
-
-/* .footer{
-    font-weight: 100;
-} */
