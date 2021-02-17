@@ -37,7 +37,7 @@ $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
             </tr>
         </thead>
         <tbody>
-            <? $i = 1; ?>
+            <? $i = 2; ?>
             <?php foreach ($barang as $value): ?>
             <tr>
                 <td><?= $i++ ?></td>
@@ -52,14 +52,5 @@ $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
             <?php endforeach; ?>
         </tbody>
     </table>
-	<div class="pagination">
-		<?php if ($page > 1): ?>
-		<a href="read.php?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
-		<?php endif; ?>
-		<?php if ($page*$records_per_page < $num_contacts): ?>
-		<a href="read.php?page=<?=$page+1?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
-		<?php endif; ?>
-	</div>
-</div>
 
 <?=template_footer()?>

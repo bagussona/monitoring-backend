@@ -9,14 +9,14 @@
 <body>
     <div class="container">
         <div class="MethodPost">
-            <form action="post.php" method="post">
-            <h2 class="HeaderPost" id="HeaderPost"> Method _POST>login</h2>
+            <form action="actioon_login.php" method="post">
+            <h2 class="HeaderPost" id="HeaderPost"> Method _POST->login</h2>
             <p class="pPost" id="usPost">Username: </p>
-            <input type="text" name="username" id="us_post" placeholder="masukkan username..">
+            <input type="text" name="username" id="username" placeholder="masukkan username..">
             <p class="pPost" id="pwPost">Password: </p>
-            <input type="password" name="password" id="pw_post" placeholder="masukkan password..">
-            <input type="submit" value="submit">
-            <a href="../index.php"> <p class="back">Kembali..</p></a>
+            <input type="password" name="password" id="password" placeholder="masukkan password..">
+            <input type="submit" value="submit"><br>
+            <a href="logout.php"> <p class="back">kembali..</p></a>
             </form>
         </div>
 <!-- <break> -->

@@ -1,4 +1,11 @@
 <?php
+session_start();
+if (empty($_SESSION['username'])) {
+	header("Location: login-page/login.php");
+} else {
+?>
+
+<?php
 include 'functions.php';
 // Your PHP code here.
 
@@ -13,3 +20,6 @@ include 'functions.php';
 </div>
 
 <?=template_footer()?>
+<?php
+}
+?>

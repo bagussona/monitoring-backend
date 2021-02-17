@@ -18,16 +18,16 @@ echo <<<EOT
 	<head>
 		<meta charset="utf-8">
 		<title>$title</title>
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="css/all.css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/all.css">
 	</head>
 	<body>
     <nav class="navtop">
     	<div>
     		<h1>Data Barang</h1>
-            <a href="index.php">Home</a>
-			<a href="read.php">Inventory</a>
-			<a href="login-page/login.php">Login</a>
+             <a href="logout.php">Home</a>
+			 <a href="logout.php">Inventory</a>
+			<a href="login.php">Login</a>
     	</div>
     </nav>
 EOT;
