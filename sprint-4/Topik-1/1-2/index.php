@@ -16,7 +16,8 @@ include 'functions.php';
 
 <div class="content">
 	<h2>Home</h2>
-	<p>Ini adalah halaman landing page.</p>
+	<p>Ini adalah halaman landing page. Menu Inventory ada di navbar atas</p>
+	<p>Atau bisa klik <a href="read.php">disini</a> untuk pindah ke menu inventory </p>
 </div>
 
 <?=template_footer()?>

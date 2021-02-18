@@ -25,9 +25,8 @@ echo <<<EOT
     <nav class="navtop">
     	<div>
     		<h1>Data Barang</h1>
-             <a href="logout.php">Home</a>
-			 <a href="logout.php">Inventory</a>
-			<a href="login.php">Login</a>
+             <a href="../index.php">Home</a>
+			<a href="../index.php">Login</a>
     	</div>
     </nav>
 EOT;

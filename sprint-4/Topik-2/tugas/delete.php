@@ -2,7 +2,7 @@
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check that the contact ID exists
+// Check that the Table ID exists
 if (isset($_GET['id'])) {
     // Select the record that is going to be deleted
     $stmt = $pdo->prepare('SELECT * FROM bagus_tb_bebansibudi.tb_all_barang WHERE id = ?');
@@ -33,14 +33,14 @@ if (isset($_GET['id'])) {
 <?=template_header('Delete')?>
 
 <div class="content delete">
-	<h2>Hapus barang #<?=$bagus_tb_bebansibudi.tb_all_barang['id']?></h2>
+	<h2>Hapus Barang #<?=$barang['id']?></h2>
     <?php if ($msg): ?>
     <p><?=$msg?></p>
     <?php else: ?>
-	<p>Are you sure you want to delete contact #<?=$bagus_tb_bebansibudi.tb_all_barang['id']?>?</p>
+	<p>Are you sure you want to delete barang #<?=$barang['id']?>?</p>
     <div class="yesno">
-        <a href="delete.php?id=<?=$bagus_tb_bebansibudi.tb_all_barang['id']?>&confirm=yes">Yes</a>
-        <a href="delete.php?id=<?=$bagus_tb_bebansibudi.tb_all_barang['id']?>&confirm=no">No</a>
+        <a href="delete.php?id=<?=$barang['id']?>&confirm=yes">Yes</a>
+        <a href="delete.php?id=<?=$barang['id']?>&confirm=no">No</a>
     </div>
     <?php endif; ?>
 </div>

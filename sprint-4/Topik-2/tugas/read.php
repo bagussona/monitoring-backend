@@ -7,7 +7,7 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 // Number of records to show on each page
 $records_per_page = 5;
 
-// Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
+// Prepare the SQL statement and get records from our inventory table, LIMIT will determine the page
 $stmt = $pdo->prepare('SELECT * FROM bagus_tb_bebansibudi.tb_all_barang ORDER BY id LIMIT :current_page, :record_per_page');
 $stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
@@ -15,7 +15,7 @@ $stmt->execute();
 // Fetch the records so we can display them in our template.
 $barang = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Get the total number of contacts, this is so we can determine whether there should be a next and previous button
+// Get the total number of inventory, this is so we can determine whether there should be a next and previous button
 $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
 ?>
 
@@ -37,7 +37,7 @@ $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
             </tr>
         </thead>
         <tbody>
-            <? $i = 2; ?>
+            <? $i = 1; ?>
             <?php foreach ($barang as $value): ?>
             <tr>
                 <td><?= $i++ ?></td>
@@ -45,12 +45,22 @@ $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
                 <td><?=$value['out_barang']?></td>
                 <td><?=$value['note']?></td>
                 <td class="actions">
-                    <a href="update.php?id=<?=$contact['id']?>" class="edit">UPDATE</a>
-                    <a href="delete.php?id=<?=$contact['id']?>" class="trash">DELETE</a>
+                    <a href="update.php?id=<?=$value['id']?>" class="edit">UPDATE</a>
+                    <a href="delete.php?id=<?=$value['id']?>" class="trash">DELETE</a>
                 </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+<div class="pagination">
+		<?php if ($page > 1): ?>
+		<a href="read.php?page=<?=$page-1?>"> Sebelumnya </a>
+		<?php endif; ?>
+		<?php if ($page*$records_per_page < $num_barang): ?>
+		<a href="read.php?page=<?=$page+1?>"> Berikutnya </a>
+		<?php endif; ?>
+	</div>
+</div>
 
 <?=template_footer()?>
