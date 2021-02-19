@@ -1,0 +1,37 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(107, 120, 233);
+    margin:0;
+    color:white;
+}
+
+.container {
+    display: flexbox;
+    justify-content: center;
+
+    /* display: grid; */
+    /* grid-template-columns: auto; */
+    /* grid-template-rows: 60% 40%; */
+    padding: 4em 2em 4em 2em;
+}
+
+.formLogin {
+    /* grid-template-columns: auto; */
+    display: flexbox;
+    justify-content: center;
+    max-width: 400px;
+    margin-left: 25em;
+    margin-top: 6em;
+    margin-bottom: 1em;
+    /* margin-top: 4em; */
+    padding: 1em 4em 2em 4em;
+    background: #3f69a8;
+}
+
+input{
+    max-width: 150px;
+}
+
+/* .footer{
+    font-weight: 100;
+} */
