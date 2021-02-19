@@ -33,13 +33,13 @@ if(isset($_GET['hapus_siswa']))
                     </tr>
                     <?php 
                     $no = 1;
-                    foreach($data_siswa as $row){
+                    foreach($data_santri as $row){
                         echo "<tr>";
                         echo "<td>".$no."</td>";
                         echo "<td>".$row['nama']."</td>";
                         echo "<td>".$row['divisi']."</td>";
                         echo "<td>".$row['asal']."</td>";
-                        echo "<td><a href='form_edit.php?id=".$row['id']."'>Update</a>
+                        echo "<td><a href='update.php?id=".$row['id']."'>Update</a>
                         <a href='index.php?hapus_siswa=".$row['id']."'>Hapus</a></td>";
                         echo "</tr>";
                         $no++;

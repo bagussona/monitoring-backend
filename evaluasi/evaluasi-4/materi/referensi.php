@@ -36,7 +36,7 @@ class DataSantri
     }
 
     public function update($id,$nama_santri,$divisi_santri,$alamat){
-        $query = $this->db->prepare('UPDATE data_santri set nama_santri=?, divisi=?, asal=? where id=?');
+        $query = $this->db->prepare('UPDATE data_santri set nama=?, divisi=?, asal=? where id=?');
         
         $query->bindParam(1, $nama_santri);
         $query->bindParam(2, $divisi_santri);

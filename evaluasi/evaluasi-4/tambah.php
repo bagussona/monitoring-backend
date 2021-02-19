@@ -19,38 +19,18 @@ if(isset($_POST['tombol_tambah'])){
     </head>
     <body>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h3>Tambah Data Santri</h3>
-            </div>
     <div class="card-body">
+    <h3>Tambah Data Santri</h3><br>
         <form method="post" action="">
-            <div class="form-group row">
-                    <label for="nama">Nama Santri</label>
-                    <div class="nama">
-                    <input type="text" name="nama" class="form-control" id="nama">
-                    </div>
-            </div>
-            <div class="form-group row">
-                    <label for="divisi">Divisi</label>
-                    <div class="divisi">
-                    <input type="text" name="kelas" class="form-control" id="divisi">
-                    </div>
-            </div>
-                <div class="form-group row">
-                    <label for="alamat">Alamat</label>
-                    <div class="asal">
-                    <textarea class="form-control" name="asal" id="asal"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="asal"></label>
-                    <div class="asal">
-                    <input type="submit" name="tombol_tambah" class="btn btn-primary" value="Tambah">
-                    </div>
-                </div>
+            <label for="nama">Nama Santri</label><br>
+            <input type="text" name="nama" class="form-control" id="nama"><br>
+                    <label for="divisi">Divisi</label><br>
+                    <input type="text" name="divisi" class="form-control" id="divisi"><br>
+                            <label for="asal">Alamat</label><br>
+                            <textarea class="form-control" name="asal" id="asal"></textarea><br>
+                                    <label for="asal"></label><br>
+                                    <input type="submit" name="tombol_tambah" class="btn btn-primary" value="Tambah">
             </form>
-            </div>
         </div>
     </div>
     </body>
