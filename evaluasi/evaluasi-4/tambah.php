@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (empty($_SESSION['username'])) {
+	header("Location: login_page/login.php");
+} else {
+?>
+
 <?php include "materi/referensi.php";
 $tbh = new DataSantri();
 if(isset($_POST['tombol_tambah'])){
@@ -33,5 +40,8 @@ if(isset($_POST['tombol_tambah'])){
             </form>
         </div>
     </div>
-    </body>
+</body>
 </html>
+<?php
+}
+?>

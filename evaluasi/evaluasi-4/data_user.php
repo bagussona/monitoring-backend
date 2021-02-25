@@ -8,7 +8,7 @@ if (empty($_SESSION['username'])) {
 
 <?php include "materi/referensi.php";
 $tbh = new DataSantri();
-$data_santri = $tbh->read();
+$data_santri = $tbh->read1();
 
 if(isset($_GET['hapus_santri']))
 {
@@ -28,8 +28,8 @@ if(isset($_GET['hapus_santri']))
     <body class="body_index">
     <nav class="navtop">
     	<div>
-            <h1>Data Santri</h1>
-            <a href="data_user.php">data_user</a>
+            <h1>Data User</h1>
+            <a href="index.php">data_santri</a>
             <a href="login_page/logout.php">Logout</a>
     	</div>
     </nav>
@@ -42,9 +42,9 @@ if(isset($_GET['hapus_santri']))
                     <tr>><td colspan="4"><td colspan="4"><div class="btn-box"><a href="try_tambah.php" class="btn btn-success">Tambah Data</a></div></td></td></tr>
                     <tr>
                         <th>ID</th>
-                        <th>Nama Santri</th>
-                        <th>Divisi</th>
-                        <th>Asal</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Re-Password</th>
                         <th>Fungsi</th>
                     </tr>
                     <?php 
@@ -52,11 +52,11 @@ if(isset($_GET['hapus_santri']))
                     foreach($data_santri as $row){
                         echo "<tr>";
                         echo "<td>".$no."</td>";
-                        echo "<td>".$row['nama']."</td>";
-                        echo "<td>".$row['divisi']."</td>";
-                        echo "<td id='asal'>".$row['asal']."</td>";
-                        echo "<td><a href='try_perbarui.php?id=".$row['id']."'>Update</a> | 
-                        <a href='index.php?hapus_santri=".$row['id']."'>Hapus</a> </td>";
+                        echo "<td>".$row['username']."</td>";
+                        echo "<td>".$row['password']."</td>";
+                        echo "<td>".$row['password']."</td>";
+                        echo "<td><a href='#'>Update</a> | 
+                        <a href='#'>Hapus</a> </td>";
                         
                         echo "</tr>";
                         $no++;

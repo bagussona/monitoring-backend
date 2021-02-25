@@ -1,0 +1,166 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background: rgb(107, 120, 233); */
+    margin: 0;
+    /* color:white; */
+}
+
+.header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    margin-top: 4.4%;
+    background-color: white;
+    /* margin-bottom: 5%; */
+}
+.konten_kiri{
+    position: relative;
+    text-align: left;
+    margin-left: 3em;
+    /* max-width: 600px; */
+}
+
+.konten_kanan{
+    position: relative;
+    text-align: right;
+    margin-right: 2em;
+}
+
+.konten_mid{
+    position: relative;
+    text-align: right;
+}
+
+.beranda{
+    position: initial;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 15px;
+    /* background: #F5EDF0; */
+    max-width: 840px;
+    max-height: 340px;
+    margin-left: 2.5em;
+}
+
+.right_bar{
+    width: 300px;
+    /* float: right; */
+    position: fixed;
+    padding: 5px;
+    margin-top: 70px;
+    margin-left: 85%;
+}
+
+.posisi{
+    margin-top: 120px;
+}
+
+.table{
+    display: block;
+    margin-top: 120px;
+}
+
+.content{
+    /* position: fixed; */
+    float: left;
+    width: 240px;
+    height: 320px;
+    /* margin-top: 5%; */
+   margin-left: 5px;
+   margin-bottom: 5px;
+   padding: 0 10px 10px 10px;
+   background: #F5EDF0;
+  }
+
+.button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #d3dbd5;
+    color: rgb(0, 0, 0);
+  }
+
+.navtop {
+    position: fixed;
+    background-color: #3f69a8;
+    height: 60px;
+    width: 100%;
+    border: 0;
+}
+
+.navtop div {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+.navtop div h1, .navtop div a {
+    display: inline-flex;
+    align-items: center;
+}
+.navtop div h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color: #ecf0f6;
+    font-weight: normal;
+}
+.navtop div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #c5d2e5;
+    font-weight: bold;
+}
+.navtop div a i {
+    padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+    color: #ecf0f6;
+}
+
+.bungkusantable{
+    position: initial;
+    margin-top: 75px;
+}
+
+.data_santri{
+    margin-top: 25px;
+        /* margin-left: 8em; */
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 120%;
+      }
+      
+td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+tr:nth-child(even){background-color: #f2f2f2;}
+      
+tr:hover {
+    background-color: #ddd;
+}
+      
+th {
+    padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #614caf;
+        color: white;
+    }

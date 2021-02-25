@@ -1,0 +1,82 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(107, 120, 233);
+    margin:0;
+    color:white;
+}
+
+.container {
+    display: flexbox;
+    justify-content: center;
+
+    /* display: grid; */
+    /* grid-template-columns: auto; */
+    /* grid-template-rows: 60% 40%; */
+    padding: 4em 2em 4em 2em;
+}
+
+.data_santri{
+        margin-left: 10em;
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 75%;
+      }
+      
+td, th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+#td.asal{
+    text-align: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+      
+tr:hover {
+    background-color: #ddd;
+}
+      
+th {
+    padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #614caf;
+        color: white;
+    }
+
+.formLogin {
+    /* grid-template-columns: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin-left: 25em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+    /* margin-top: 4em; */
+    padding: 3em 3em 3em 3em;
+    background: #3f69a8;
+}
+
+.formRegister {
+    /* grid-template-columns: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin-left: 25em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    /* margin-top: 4em; */
+    padding: 3em 3em 3em 3em;
+    background: #3f69a8;
+}
+
+input{
+    max-width: 150px;
+}
+
+/* .footer{
+    font-weight: 100;
+} */

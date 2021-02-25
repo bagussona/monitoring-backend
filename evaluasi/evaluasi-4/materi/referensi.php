@@ -9,6 +9,7 @@ class DataSantri
         $password = "awsd123";
         $this->db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
     }
+
     public function create($nama_santri, $divisi_santri, $alamat)
     {
         $data = $this->db->prepare('INSERT INTO evaluasi_4.data_santri (nama, divisi, asal) VALUES (?, ?, ?)');
@@ -20,9 +21,18 @@ class DataSantri
         $data->execute();
         return $data->rowCount();
     }
+
     public function read()
     {
         $query = $this->db->prepare("SELECT * FROM evaluasi_4.data_santri");
+        $query->execute();
+        $data = $query->fetchAll();
+        return $data;
+    }
+
+    public function read1()
+    {
+        $query = $this->db->prepare("SELECT * FROM user");
         $query->execute();
         $data = $query->fetchAll();
         return $data;
@@ -57,5 +67,17 @@ class DataSantri
         return $query->rowCount();
     }
 
+    public function register($username, $password)
+    {
+        $query = $this->db->prepare('INSERT INTO evaluasi_4.user (username, password) VALUES (?, ?)');
+        
+        $query->bindParam(1, $username);
+        $query->bindParam(2, $password);
+
+        $query->execute();
+        return $query->rowCount();
+    }
+
 }
+
 ?>

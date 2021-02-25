@@ -1,5 +1,8 @@
-<?php include 'koneksi.php';
+<?php include 'fungsi.php';
 $pdo = pdo_connect_mysql();
+    // variable pendefinisian kredensial
+    // $usernamelogin = 'bagus';
+    // $passwordlogin = 'awsd123';
 
     // memulai session
     session_start();
@@ -9,10 +12,10 @@ $pdo = pdo_connect_mysql();
     $password = $_POST['password'];
 
     try {
-        $stmt = $pdo->prepare("SELECT * FROM evaluasi_4.user WHERE username = :username AND password = :password"); // buat queri select
+        $stmt = $pdo->prepare("SELECT * FROM user WHERE name = :username AND password = :password"); // buat queri select
         // $stmt = prepare($sql); 
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindValue(':username', $username);
+        $stmt->bindValue(':password', $password);
         $stmt->execute(); // jalankan query
 
 
@@ -22,11 +25,9 @@ $pdo = pdo_connect_mysql();
             header("Location: ../index.php"); // lempar variabel ke tampilan index.php
             return;
         }else{
-            echo "#####################################"."<br>";
-            echo "Username atau Password anda salah. Silahkan periksa lagi.." ."<br>";
-            echo "Anda akan redirect kembali ke halaman login setelah 5 detik.." ."<br>";
-            echo "#####################################"."<br>";
-            header("Refresh:5;url=try_login.php");
+            echo "Username atau Password anda salah. Silahkan periksa lagi..";
+            echo "Anda akan di redirect kembali ke halaman login setelah 5 detik..";
+            header("Refresh:5; Location: ../login.php");
         }
     }
     catch(PDOException $e) {
