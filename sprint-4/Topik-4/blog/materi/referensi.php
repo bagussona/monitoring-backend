@@ -49,18 +49,34 @@ class DataSantri
         return $data;
     }
 
+    public function readKategori($cat_post)
+    {
+        $query = $this->db->prepare("SELECT * FROM postingan where kategori_post=?");
+        $query->bindParam(1, $cat_post);
+        $query->execute();
+        $data = $query->fetchAll();
+        return $data;
+    }
+
     public function get_by_id($id){
         $query = $this->db->prepare("SELECT * FROM user where id=?");
         $query->bindParam(1, $id);
         $query->execute();
         return $query->fetch();
     }
-    public function get_by_postID($id){
-        $query = $this->db->prepare("SELECT * FROM postingan where id=?");
-        $query->bindParam(1, $id);
+    public function get_by_postID($cat_post){
+        $query = $this->db->prepare("SELECT * FROM postingan where kategori_post=?");
+        $query->bindParam(1, $cat_post);
         $query->execute();
         return $query->fetch();
     }
+
+    // public function get_by_postCAT($cat){
+    //     $query = $this->db->prepare("SELECT * FROM postingan where kategori_post=?");
+    //     $query->bindParam(1, $cat);
+    //     $query->execute();
+    //     return $query->fetch();
+    // }
 
     public function updateUser($id,$user,$password){
         $query = $this->db->prepare('UPDATE user set username=?, password=? where id=?');

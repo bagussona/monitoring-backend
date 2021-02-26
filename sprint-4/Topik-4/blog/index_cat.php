@@ -8,7 +8,12 @@ if (empty($_SESSION['username'])) {
 <?php include ("materi/referensi.php");
 $tbh = new DataSantri();
 $data_santri = $tbh->trending();
-$data_post = $tbh->readPost();
+
+if(isset($_GET['kategori_post']))
+{
+    $fil_cat = $_GET['kategori_post'];
+    $filtered_cat = $tbh->readKategori($fil_cat);
+}
 
 ?>
 
@@ -22,8 +27,8 @@ $data_post = $tbh->readPost();
     <div>
         <h1>Home</h1>
         <!-- <a href="index.php">home</a> -->
-        <a href="index_postingan.php">d_post</a>
-        <a href="index_user.php">d_user</a>
+        <a href="index.php">home</a>
+        <!-- <a href="index_user.php">d_user</a> -->
         <a href="../blog/login_page/logout.php">logout</a>
     </div>
 </nav>           
@@ -45,9 +50,7 @@ $data_post = $tbh->readPost();
             foreach($data_santri as $row){
                 echo "<table width='150px' height='50px'>";
                 echo "<tr>";
-                // echo "<td align='right'>".$row['kategori_post']." | "."</td>";
                 echo "<td align='right'>"."<a href='index_cat.php?kategori_post=".$row['kategori_post']."'> ".$row['kategori_post']." | "."</a>"."</td>";
-                // echo "<td align='right'>"."<a href='index.php?cat_post=".$row['kategori_post']."'> ".$row['kategori_post']." | "."</a>"."</td>";
                 echo "</tr>";
                 echo "</table>";
                 }
@@ -58,7 +61,7 @@ $data_post = $tbh->readPost();
     <div class="posisi">
     <?php
     $i = 1;
-    foreach($data_post as $post){
+    foreach($filtered_cat as $post){
     echo "<div class='content'>";
         echo "<h3>"." | ". $post['judul_post'] . "</h3>";
         echo "<p style='font-size:14px;' align='right'>". $post['kategori_post'] . " | ". $post['tgl_post'] . "</p>";

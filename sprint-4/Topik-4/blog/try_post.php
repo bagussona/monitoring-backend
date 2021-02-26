@@ -14,7 +14,6 @@ if(isset($_POST['tombol_post'])){
     $image = $_POST['image'];
     $date = date("Y-m-d");
 
-
     $add_status = $tbh->createPost($judul, $kategori, $isi, $image, $date);
     if($add_status){
       echo "<font color='#ff0000'>Berhasil menambahkan data!</font>";

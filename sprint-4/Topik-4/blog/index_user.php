@@ -41,7 +41,7 @@ if(isset($_GET['del_post']))
             <hr width="180%" align="left">
         </div>
         <div class="konten_mid">
-        <a href="try_post.php"><button class="button" type="button">>New User</button></a>
+        <a href="login_page/try_register.php"><button class="button" type="button">>New User</button></a>
                 <!-- <hr width="100%" align="right"> -->
         </div>
         <div class="konten_kanan">
