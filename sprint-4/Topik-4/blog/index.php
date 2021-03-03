@@ -64,7 +64,7 @@ $data_post = $tbh->readPost();
         echo "<p style='font-size:14px;' align='right'>". $post['kategori_post'] . " | ". $post['tgl_post'] . "</p>";
         echo "<span>#Post ke-".$i. "  [".$post['img_post']."]</span>";
         // echo "<p>Anda bisa klik <a href='data_santri.php'>disini</a> untuk pindah ke menu Santri </p>";
-        echo "<p style='text-align: justify;'>". $post['isi_post'] ."</p>";
+        echo "<p style='text-align: justify;'>". substr($post['isi_post'], 0, 500) ."</p>";
         echo "<hr width='75%'' align='left'>";
     echo "</div>";
     $i++;
