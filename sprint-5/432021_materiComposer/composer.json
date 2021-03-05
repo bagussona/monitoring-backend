@@ -1,0 +1,19 @@
+{
+    "name": "bagus/testing",
+    "description": "belajar autoload composer",
+    "authors": [
+        {
+            "name": "Bagus",
+            "email": "bagussona87@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.45"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "Src/"
+        }
+    }
+
+}
