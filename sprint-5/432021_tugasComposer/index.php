@@ -4,22 +4,27 @@
     //         include 'class/' . $class . '.php';
     //     });
 
-$app_path = "./";
-$class = [
-    "LuasLingkaran\Lingkaran" => $app_path."class/LuasLingkaran.php",
-    "LuasPersegi\Persegi" => $app_path."class/LuasPersegi.php",
-    "LuasSegitiga\Segitiga" => $app_path."class/LuasSegitiga.php"
-];
+// $app_path = "./";
+// $class = [
+//     "LuasLingkaran\Lingkaran" => $app_path."class/LuasLingkaran.php",
+//     "LuasPersegi\Persegi" => $app_path."class/LuasPersegi.php",
+//     "LuasSegitiga\Segitiga" => $app_path."class/LuasSegitiga.php"
+// ];
 
-spl_autoload_register(function($name) use ($class){
-    $file = $class[$name];
-    include_once $file;
-});
+// spl_autoload_register(function($name) use ($class){
+//     $file = $class[$name];
+//     include_once $file;
+// });
 
-use LuasLingkaran\Lingkaran;
-use LuasPersegi\Persegi;
-use LuasSegitiga\Segitiga;
+// use LuasLingkaran\Lingkaran;
+// use LuasPersegi\Persegi;
+// use LuasSegitiga\Segitiga;
 
+
+require_once __DIR__ . '/vendor/autoload.php';
+use class\Lingkaran;
+use class\LuasPersegi;
+use class\LuasSegitiga;
 ?>
 
 <!DOCTYPE html>
