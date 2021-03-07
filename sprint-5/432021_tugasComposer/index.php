@@ -1,4 +1,4 @@
-<?php namespace Index;
+<?php
 
 // spl_autoload_register(function ($class){
     //         include 'class/' . $class . '.php';
@@ -21,10 +21,10 @@
 // use LuasSegitiga\Segitiga;
 
 
-require_once __DIR__ . '/vendor/autoload.php';
-use class\Lingkaran;
-use class\LuasPersegi;
-use class\LuasSegitiga;
+require __DIR__ . '/vendor/autoload.php';
+use bangundatar\Lingkaran;
+use bangundatar\Persegi;
+use bangundatar\Segitiga;
 ?>
 
 <!DOCTYPE html>

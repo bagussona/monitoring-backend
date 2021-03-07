@@ -37,10 +37,10 @@ $num_barang = $pdo->query('SELECT COUNT(*) FROM tb_all_barang')->fetchColumn();
             </tr>
         </thead>
         <tbody>
-            <? $i = 1; ?>
+        <?php $no = 1; ?>
             <?php foreach ($barang as $value): ?>
             <tr>
-                <td><?= $i++ ?></td>
+                <td><?= $no++; ?></td>
                 <td><?=$value['in_barang']?></td>
                 <td><?=$value['out_barang']?></td>
                 <td><?=$value['note']?></td>

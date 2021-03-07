@@ -18,7 +18,7 @@
 
 $servername = "localhost";
 $username = "bagus";
-$password = "awsd123";
+$password = "Baguzt3aa";
 $dbname = "lights_life_company";
 
 try {

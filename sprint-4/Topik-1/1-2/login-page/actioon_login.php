@@ -1,7 +1,7 @@
 <?php
     // variable pendefinisian kredensial
     $usernamelogin = 'bagus';
-    $passwordlogin = 'awsd123';
+    $passwordlogin = 'Baguzt3aa';
 
     // memulai session
     session_start();

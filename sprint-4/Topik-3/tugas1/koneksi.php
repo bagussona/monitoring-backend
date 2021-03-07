@@ -2,7 +2,7 @@
 session_start(); // ini adalah kode untuk memulai session
 $host = "localhost";
 $username = "bagus";
-$password = "awsd123";
+$password = "Baguzt3aa";
 
 try{
     $conn = new PDO("mysql:host=$host; dbname=sprint_4", $username, $password);

@@ -10,7 +10,7 @@ if(isset($_POST['login'])) { // mengecek apakah form variabelnya ada isinya
     $password = $_POST['password']; // isi variabel dengan mengambil data password pada form
 
     try {
-        $sql = "SELECT * FROM user WHERE name = :username AND password = :password"; // buat queri select
+        $sql = "SELECT * FROM user WHERE username = :username AND password = :password"; // buat queri select
         $stmt = $conn->prepare($sql); 
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $password);

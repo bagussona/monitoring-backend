@@ -1,4 +1,5 @@
-<?php namespace LuasSegitiga;
+<?php
+namespace bangundatar;
 
 #JelekBangetCodenya!!!
 // class LuasSegitiga{

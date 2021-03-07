@@ -1,4 +1,5 @@
-<?php namespace LuasPersegi;
+<?php
+namespace bangundatar;
 
 #JelekBangetCodeNya!!!
 // class LuasPersegi{

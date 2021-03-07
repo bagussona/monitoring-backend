@@ -12,7 +12,7 @@ $pdo = pdo_connect_mysql();
     $password = $_POST['password'];
 
     try {
-        $stmt = $pdo->prepare("SELECT * FROM user WHERE name = :username AND password = :password"); // buat queri select
+        $stmt = $pdo->prepare("SELECT * FROM user WHERE username = :username AND password = :password"); // buat queri select
         // $stmt = prepare($sql); 
         $stmt->bindValue(':username', $username);
         $stmt->bindValue(':password', $password);
