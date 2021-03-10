@@ -1,0 +1,15 @@
+{
+    "name": "bagus/evaluasi",
+    "description": "Evaluasi-5 --> Composer",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "bagussona",
+            "email": "bagussona87@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
