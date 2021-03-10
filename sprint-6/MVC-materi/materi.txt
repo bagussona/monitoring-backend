@@ -1,0 +1,24 @@
+MVC NOTE
+
+NOTE
+ #judul chpt
+ ; = keterangan
+ / = path folder
+ -> = folder akar
+ --> = didalam folder akar 
+
+
+
+Video #1
+#membuat folder public! ;akses user (index)
+->/public
+  -->/css
+  -->/html
+  -->/img
+
+#membuat folder app! ;penyimpanan aplikasi MVC
+->/app
+  -->/controllers ;semua control disimpan disini
+  -->/core ;inti MVC
+  -->/models ;crud
+  -->/views ;antarmuka /ui
