@@ -46,21 +46,21 @@ if(isset($_POST['tombol_post'])){
     <div class="header">
             <h1>Update Post!</h1>
           </div>
-          <input type="hidden" name="id" value="<?php echo $postID['id']; ?>"/>
+          <input type="hidden" name="id" value="<?= $postID['id']; ?>"/>
     <div class="group">
             <input type="text" name="judul" required="required"/><span class="highlight"></span><span class="bar"></span>
-            <label>Judul: <?php echo $postID['judul_post']; ?> ></label>
+            <label>Judul: <?= $postID['judul_post']; ?></label>
           </div>
      <div class="group">
             <input type="text" name="kategori" required="required"/><span class="highlight"></span><span class="bar"></span>
-            <label>Kategori: <?php echo $postID['kategori_post']; ?> ></label>
+            <label>Kategori: <?= $postID['kategori_post']; ?></label>
           </div>
       <div class="group">
             <input type="text" name="image" required="required"></input><span class="highlight"></span><span class="bar"></span>
-            <label>Image: <?php echo $postID['img_post']; ?> ></label>
+            <label>Image: <?= $postID['img_post']; ?></label>
       <div class="group">
             <textarea type="textarea" name="isi" rows="5" required="required"></textarea><span class="highlight"></span><span class="bar"></span>
-            <label>Isi: <?php echo $postID['isi_post']; ?> ></label>
+            <label>Isi: <?= $postID['isi_post']; ?></label>
             <!-- <input type="file" name="image" value=""> -->
             <!-- <button class="btn btn-submit" type="submit" name="tombol_post">Post</button> -->
           </div>

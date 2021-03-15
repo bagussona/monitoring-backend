@@ -12,8 +12,8 @@
 
                 <div class="modal-body">
                 <form action="<?= BASEURL; ?>Postingan/ubah" method="post">
-                <input type="hidden" name="id" id="id">
                     <div class="form-group">
+                        <input type="hidden" name="id" id="id" value="<?= $data['postingan']['id']; ?>">
                         <label for="judul_post">Judul Postingan</label>
                         <input type="text" class="form-control" name="judul_post" id="judul_post" aria-describedby="emailHelp" placeholder="<?= $data['postingan']['judul_post']; ?>">
                     </div>
@@ -42,6 +42,13 @@
 
 
 <div class="container mt-3">
+
+<div class="row">
+    <div class="col-6">
+            <?php Flasher::flash(); ?>
+    </div>
+</div>
+
     <div class="row">
         <div class="col-6">
             <h2>Detail Post</h2>

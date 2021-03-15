@@ -20,10 +20,7 @@
             <a class="nav-link" href="<?= BASEURL; ?>Home/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= BASEURL; ?>About/">About</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="<?= BASEURL; ?>Login/">logout</a>
+            <a class="nav-link disabled" href="<?= BASEURL; ?>About">About</a>
         </li>
       </ul>
     </div>

@@ -42,6 +42,7 @@ class Postingan extends Controller{
 
    public function ubah(){
       if( $this->model('Postingan_model')->ubahPost($_POST) > 0){
+         var_dump($_POST);
          Flasher::setFlash('berhasil', 'diubah', 'success');
          header('Location: ' . BASEURL . 'Postingan');
          exit;

@@ -65,7 +65,7 @@ class DataSantri
         return $query->fetch();
     }
     public function get_by_postID($cat_post){
-        $query = $this->db->prepare("SELECT * FROM postingan where kategori_post=?");
+        $query = $this->db->prepare("SELECT * FROM postingan where id=?");
         $query->bindParam(1, $cat_post);
         $query->execute();
         return $query->fetch();
