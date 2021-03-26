@@ -23,7 +23,7 @@
             <a class="nav-link" href="<?= BASEURL; ?>About/">About</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= BASEURL; ?>Login/">logout</a>
+            <a class="nav-link" href="<?= BASEURL; ?>Login/logout">logout</a>
         </li>
       </ul>
     </div>

@@ -6,6 +6,12 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-6">
+            <?php Flasher::flashLogin(); ?>
+    </div>
+</div>
+
     <div class="row">
         <div class="col-6">
             <h1>Postingan Databases</h1>

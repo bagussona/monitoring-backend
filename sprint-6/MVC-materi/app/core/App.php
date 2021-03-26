@@ -9,6 +9,23 @@ class App{
     public function __construct(){
         $url = $this->parseURL();
 
+if(empty($_SESSION['username'])){
+    if ($url[1]=='index') {
+        $url[0] = 'Login';
+        $url[1] = 'index';
+    } elseif ($url[1]=='register') {
+        $url[0] = 'Login';
+        $url[1] = 'register';
+    }elseif ($url[1]== 'loginSuccess') {
+        $url[0] = 'Login';
+        $url[1] = 'loginSuccess';
+    } else {
+        $url[0] = 'Login';
+        $url[1] = 'index';
+    }
+    
+}
+
         if( file_exists('../app/controllers/' . $url[0] . '.php')){
             $this->controller = $url[0];
             unset($url[0]);
