@@ -9,7 +9,7 @@ $pdo = pdo_connect_mysql();
     $password = $_POST['password'];
 
     try {
-        $stmt = $pdo->prepare("SELECT * FROM evaluasi_4.user WHERE username = :username AND password = :password"); // buat queri select
+        $stmt = $pdo->prepare("SELECT * FROM user WHERE username = :username AND password = :password"); // buat queri select
         // $stmt = prepare($sql); 
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $password);

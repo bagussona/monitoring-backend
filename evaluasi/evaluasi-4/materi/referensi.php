@@ -6,7 +6,7 @@ class DataSantri
         $host = "localhost";
         $dbname = "evaluasi_4";
         $username = "bagus";
-        $password = "awsd123";
+        $password = "Baguzt3aa";
         $this->db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
     }
 
